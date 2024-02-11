@@ -1,0 +1,83 @@
+
+
+
+<div class="career-banner">
+  <img src="../../../assets/career-banner.webp" alt="" >
+</div>
+
+
+<div class="careers-main">
+  <div class="career-mission">
+    <h2>WHY PIATRIKA?</h2>
+    <h5>A career at Piatrika isn’t just a job, it’s a challenge you took to change millions of farmers life by solving their grassroots problems.</h5>
+  </div>
+  <div class="career-elipse-img">
+    <img src="../../../assets/isometric-concept-laboratory-exploring-new-methods-plant-breeding-agricultural-genetics-plants-growing-test-tubes_589019-3914.avif" alt=""/>
+  </div>
+  <div class="career-mission">
+    <h2>OUR MISSION</h2>
+    <h5>We provide outstanding high value & high-quality solutions by combining Scientific Research that would improve our customers’ operations.</h5>
+  </div>
+
+</div>
+
+
+<div *ngIf="jobs && jobs.length > 0" class="job-main">
+  <h2 class="title">Available Jobs</h2>
+  <div class="job-container">
+    <div *ngFor="let job of jobs;let i = index" class="job-items">
+      <h3>{{ job.job_title }}</h3>
+      <p>{{ job.job_description }}</p>
+      <div [class.hidden]="!activeStates[i]">
+          <div *ngIf="job.responsibility">
+            <h4>Responsibility</h4>
+            <p>{{job.responsibility}}</p>
+          </div>
+          <div *ngIf="job.skills">
+            <h4>Skills</h4>
+            <p>{{job.skills}}</p>
+          </div>
+          <div *ngIf="job.experience">
+            <h4>Experience</h4>
+            <p>{{job.experience}}</p>
+          </div>
+          <div *ngIf="job.nice_to_have">
+            <h4>Nice to Have</h4>
+            <p>{{job.nice_to_have}}</p>
+          </div>
+          <div *ngIf="job.benefit">
+            <h4>Offer</h4>
+            <p>{{job.benefit}}</p>
+          </div>
+          <div *ngIf="job.qualification">
+            <h4>Qualification</h4>
+            <p>{{job.qualification}}</p>
+          </div>
+          <div *ngIf="job.job_location">
+            <h4>Location</h4>
+            <p>{{job.job_location}}</p>
+          </div>
+          <div *ngIf="job.last_date_for_application">
+            <h4>Last Date</h4>
+            <p>{{job.last_date_for_application}}</p>
+          </div>
+          <div *ngIf="job.apply_now_link" class="apply-div">
+            <h4>Apply Now</h4>
+            <a href="{{job.apply_now_link}}" class="apply-btn">apply now</a>
+          </div>
+      </div>
+      <button (click)="activate(i)" class="job-button">{{!activeStates[i] ? "READ MORE":"READ LESS"}}</button>
+
+    </div>
+  </div>
+</div>
+
+<div *ngIf="jobs && jobs.length === 0" class="job-main">
+  <p>No jobs available at the moment.</p>
+</div>
+
+<div *ngIf="!jobs" class="job-main">
+  <p>Loading...</p>
+</div>
+
+

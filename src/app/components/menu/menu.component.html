@@ -1,0 +1,9 @@
+<div class="mobile-menu">
+  <button (click)="toggleMenu()">{{!isOpen?'☰':'X'}}</button>
+  <ul *ngIf="isOpen">
+    <li><a [routerLink]="['/home']"  routerLinkActive="active" ariaCurrentWhenActive="page" >HOME</a></li>
+    <li><a [routerLink]="['/about']"  routerLinkActive="active" ariaCurrentWhenActive="page" >ABOUT</a></li>
+    <li><a [routerLink]="['/careers']"  routerLinkActive="active" ariaCurrentWhenActive="page" >CAREERS</a></li>
+    <li><a [routerLink]="['/contactus']"  routerLinkActive="active" ariaCurrentWhenActive="page" >CONTACT US</a></li>
+  </ul>
+</div>

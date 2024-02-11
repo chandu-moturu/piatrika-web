@@ -1,0 +1,49 @@
+.mobile-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-menu {
+    transform: translate(-40px,20px);
+    display: block;
+    position:relative;
+    z-index: 10;
+    position: fixed;
+
+  }
+
+  ul {
+    backdrop-filter: blur(15px);
+    transform: translate(-450px);
+    transition:4s cubic-bezier(0.215, 0.610, 0.355, 1);
+    list-style-type: none;
+    padding: 0;
+    height: 80dvh;
+   border-radius: 5px;
+
+  }
+
+  li {
+    width: 100dvw;
+    text-align: center;
+    line-height: 100px;
+
+  }
+  li :hover{
+    color: aqua;
+    scale: 1.2;
+    width: 100dvw;
+    background-color: rgb(149, 227, 145);
+    filter: blur(1px);
+    padding: 8px 130px;
+    border-radius: 8px;
+  }
+
+  a {
+    color: rgb(0, 191, 255);
+    text-shadow: 2px 2px black;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+}

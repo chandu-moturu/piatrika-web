@@ -1,0 +1,14 @@
+<div [ngClass]="{ 'scroll-header': isScrolled }" class="header-main"  >
+
+  <div>
+    <img src="../../../assets/Piatrika-logo.png" alt="" width="150">
+  </div>
+  <div class="nav-items" [ngClass]="isMenuVisible ? 'nav-open' : 'nav-close'"id="nav-items" >
+    <a [routerLink]="['/home']"  routerLinkActive="active" ariaCurrentWhenActive="page" >HOME</a>
+    <a [routerLink]="['/about']"  routerLinkActive="active" ariaCurrentWhenActive="page" >ABOUT</a>
+    <a [routerLink]="['/careers']"  routerLinkActive="active" ariaCurrentWhenActive="page" >CAREERS</a>
+    <a [routerLink]="['/contactus']" routerLinkActive="active" ariaCurrentWhenActive="page" >CONTACT US</a>
+  </div>
+  <app-menu></app-menu>
+</div>
+

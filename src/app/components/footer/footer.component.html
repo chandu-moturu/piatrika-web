@@ -1,0 +1,77 @@
+<div class="banner">
+  <div class="banner-content">
+    <h1>BE FUTURE READY WITH US</h1>
+  </div>
+  <div class="banner-btn">
+    <button
+      [routerLink]="['/contactus']"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      style="cursor: pointer"
+    >
+      CONTACT US
+    </button>
+    <button
+      [routerLink]="['/about']"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      style="cursor: pointer"
+    >
+      Explore More
+    </button>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <h2>India</h2>
+      <h5>
+        T-Hub, Plot No 1/C, Sy No 83/1, Raidurgam Panmaktha Hyderabad Knowledge
+        City, Serilingamaplly, Hyderabad, Telangana 500081
+      </h5>
+    </div>
+    <div class="footer-content">
+      <h2>UK</h2>
+      <h5>NIAB Barn4, Park Farm, Villa Rd, Histon, Cambridge CB24 9NZ</h5>
+    </div>
+    <div class="footer-content">
+      <h2>Useful Links</h2>
+      <ul>
+        <li>
+          <a
+            [routerLink]="['/home']"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['/about']"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['/careers']"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >CAREERS</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['/contactus']"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >CONTACT US</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>{{ date }} CLUSTER &copy; All Rights Reserved</p>
+</div>

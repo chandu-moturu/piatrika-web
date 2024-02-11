@@ -1,0 +1,76 @@
+<div class="contact-banner-main">
+  <div class="contact-banner"></div>
+</div>
+<div class="contact-main">
+  <div class="form-container">
+    <form [formGroup]="myForm" (ngSubmit)="submitDetails()" class="form">
+      <h1 style="color: aqua;">We're Ready, Let's Talk</h1>
+
+      <div class="form-fields">
+        <label for="name">Your Name</label>
+        <input type="text" formControlName="name">
+      </div>
+
+      <div class="form-fields">
+        <label for="phone">Phone Number</label>
+        <input type="number" formControlName="phone">
+      </div>
+
+      <div class="form-fields">
+        <label for="email">Email</label>
+        <input type="email" formControlName="email">
+      </div>
+
+      <div class="form-fields">
+        <label for="message">Message</label>
+        <textarea formControlName="message" cols="30" rows="10"></textarea>
+      </div>
+
+      <div class="form-fields">
+        <button type="submit" [disabled]="myForm.invalid" >SEND MESSAGE</button>
+      </div>
+    </form>
+
+  </div>
+
+  <div class="contact-info">
+    <h1 style="color: aqua;">Reach Us At</h1>
+    <div class="row">
+      <div class="row-content">
+        <h2>INDIA</h2>
+        <p>T-Hub, Plot No 1/C, Sy No 83/1,
+          Raidurgam panmaktha
+          Hyderabad Knowledge City,
+          Serilingamaplly,
+          Hyderabad,
+          Telangana 500081
+
+          <strong>Phone:</strong> +91-9573556999</p>
+      </div>
+      <div class="row-img">
+        <img src="../../../assets/india_office.png" alt="" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-img">
+        <img src="../../../assets/incubated.jpg" alt="">
+      </div>
+      <div class="row-content">
+        <h2>INCUBATED AT:</h2>
+        <p>International Crops Research Institute for the Semi-arid Tropics (ICRISAT), Patancheru, Hyderabad, Telangana 502324</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-content">
+        <h2>UK</h2>
+        <p>NIAB Barn4, Park Farm, Villa Rd, Histon, Cambridge CB24 9NZ</p>
+      </div>
+      <div class="row-img">
+        <img src="../../../assets/uk.jpg" alt="">
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

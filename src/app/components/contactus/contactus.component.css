@@ -1,0 +1,131 @@
+.contact-banner-main{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.contact-banner{
+  width: 96%;
+  height: 100%;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background: url('../../../assets/HemeonLearning-Page-Banner-Contact.png');
+
+}
+
+.form-container{
+  display: flex;
+  flex-wrap: wrap;
+
+  flex-grow: 1;
+  width: 500px;
+  justify-content:left;
+  align-items: center;
+  flex-direction: column;
+}
+.form{
+  background:linear-gradient(rgb(5, 0, 0),rgb(42, 42, 44));
+  width: 60%;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 8px 13px 40px black;
+
+}
+.form .form-fields{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form .form-fields input{
+  padding: 8px;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.form .form-fields textarea{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+}
+
+.form .form-fields button{
+  margin-top: 10px;
+  background-color: rgb(81, 127, 255);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+.form .form-fields button:hover{
+  background-color: rgb(74, 115, 228);
+
+}
+.contact-main{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 40px;
+}
+.contact-info{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  padding: 30px;
+}
+.contact-info .row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.contact-info .row .row-content{
+  width: 50%;
+}
+
+.contact-info .row .row-img img{
+  width: 300px;
+  height: 200px;
+  aspect-ratio: 3/2;
+  filter: blur(1px);
+  border-radius: 8px;
+}
+.contact-info .row .row-img img:hover{
+  filter: blur(0px);
+}
+
+
+@media screen and (max-width:420px){
+  .contact-banner{
+     background: url('../../../assets/contact-sm-banner.png');
+    
+     background-clip: border-box;
+    background-size: cover;
+
+  }
+  .contact-info .row:nth-child(1){
+    flex-wrap: wrap-reverse;
+  }
+  .contact-info .row:nth-child(3){
+    flex-wrap: wrap-reverse;
+  }
+  .contact-info .row .row-content{
+    width: 100%;
+  }
+  .contact-info .row{
+    margin-bottom: 5px;
+  }
+
+
+}
